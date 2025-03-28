@@ -1,0 +1,37 @@
+.modal__close_image {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../assets/preview-close.png);
+  position: absolute;
+  top: 20px;
+  right: 28px;
+}
+
+.modal__image-preview {
+  object-fit: cover;
+  width: 100%;
+}
+
+.modal__content_type_image {
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal__caption {
+  font-size: 20px;
+  margin: 32px;
+  font-family: "Cabinet Grotesk", sans-serif;
+}
+
+.modal__weather {
+  font-size: 20px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-family: "Cabinet Grotesk", sans-serif;
+}

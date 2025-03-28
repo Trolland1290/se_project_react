@@ -23,83 +23,75 @@ function AddCardModal({ closeAllModals, isOpened }) {
     closeAllModals();
   };
   return (
-    <>
-      <ModalWithForm
-        title="Add Garment"
-        name="create-new-card"
-        onSubmit={handleSubmit}
-        closeAllModals={closeAllModals}
-        isOpened={isOpened}
-      >
+    <ModalWithForm
+      title="Add Garment"
+      name="create-new-card"
+      onSubmit={handleSubmit}
+      closeAllModals={closeAllModals}
+      isOpened={isOpened}
+    >
+      {" "}
+      <label htmlFor="name" className="modal__label">
         {" "}
-        <label htmlFor="name" className="modal__label">
-          {" "}
-          Name{" "}
+        Name{" "}
+        <input
+          type="text"
+          className="modal__input"
+          id="name"
+          placeholder="Name"
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+      </label>
+      <label htmlFor="imageURL" className="modal__label">
+        {" "}
+        Image{" "}
+        <input
+          type="text"
+          className="modal__input"
+          id="imageURL"
+          placeholder="Image URL"
+          onChange={(e) => setLink(e.target.value)}
+          required
+        />
+      </label>
+      <fieldset className="modal__radio-buttons">
+        <legend className="modal__legend">Select the weather type</legend>
+        <label htmlFor="hot" className="modal__label modal__label_type_radio">
           <input
-            type="text"
-            className="modal__input"
-            id="name"
-            placeholder="Name"
-            onChange={(e) => setName(e.target.value)}
+            id="hot"
+            type="radio"
+            name="weather"
+            className="modal__input modal__input_type_radio"
+            onChange={(e) => setWeather("hot")}
             required
           />
+          Hot
         </label>
-        <label htmlFor="imageURL" className="modal__label">
-          {" "}
-          Image{" "}
+        <label htmlFor="cold" className="modal__label modal__label_type_radio">
           <input
-            type="text"
-            className="modal__input"
-            id="imageURL"
-            placeholder="Image URL"
-            onChange={(e) => setLink(e.target.value)}
+            id="cold"
+            name="weather"
+            type="radio"
+            className="modal__input modal__input_type_radio"
+            onChange={(e) => setWeather("cold")}
             required
           />
+          Cold
         </label>
-        <fieldset className="modal__radio-buttons">
-          <legend className="modal__legend">Select the weather type</legend>
-          <label htmlFor="hot" className="modal__label modal__label_type_radio">
-            <input
-              id="hot"
-              type="radio"
-              name="weather"
-              className="modal__input modal__input_type_radio"
-              onChange={(e) => setWeather("hot")}
-              required
-            />
-            Hot
-          </label>
-          <label
-            htmlFor="warm"
-            className="modal__label modal__label_type_radio"
-          >
-            <input
-              id="cold"
-              name="weather"
-              type="radio"
-              className="modal__input modal__input_type_radio"
-              onChange={(e) => setWeather("cold")}
-              required
-            />
-            Cold
-          </label>
-          <label
-            htmlFor="warm"
-            className="modal__label modal__label_type_radio"
-          >
-            <input
-              id="warm"
-              type="radio"
-              name="weather"
-              className="modal__input modal__input_type_radio"
-              onChange={(e) => setWeather("warm")}
-              required
-            />
-            Warm
-          </label>
-        </fieldset>
-      </ModalWithForm>
-    </>
+        <label htmlFor="warm" className="modal__label modal__label_type_radio">
+          <input
+            id="warm"
+            type="radio"
+            name="weather"
+            className="modal__input modal__input_type_radio"
+            onChange={(e) => setWeather("warm")}
+            required
+          />
+          Warm
+        </label>
+      </fieldset>
+    </ModalWithForm>
   );
 }
 

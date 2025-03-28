@@ -29,7 +29,7 @@ function ModalWithForm({
           ></button>
           {children}
           <button type="submit" className="modal__submit">
-            Add garment{" "}
+            {"Add garment"}
           </button>
         </form>
       </div>

@@ -11,7 +11,7 @@ function ItemModal({ activeModal, onClose, card }) {
         ></button>
         <img
           src={card.link}
-          alt=""
+          alt="clothes image"
           className="modal__image modal__image-preview"
         />
         <div className="modal__footer">

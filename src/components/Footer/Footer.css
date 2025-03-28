@@ -2,4 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 171px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }

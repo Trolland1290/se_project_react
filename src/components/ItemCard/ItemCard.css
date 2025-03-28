@@ -10,7 +10,10 @@
   top: 15px;
   margin: 0;
   font-size: 16px;
-  font-weight: 700px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  background-color: #fff;
+  padding: 2px 12px;
+  border-radius: 4px;
 }
 
 .card__img {

@@ -9,19 +9,25 @@
 }
 .header__date-and-location {
   margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: 20px;
 }
 
 .header__add-clothes-btn {
   margin-left: auto;
   margin-right: 20px;
   gap: 12px;
+  border: none;
   font-size: 20px;
+  font-family: "Cabinet Grotesk", sans-serif;
 }
 
 .header__user-container {
   display: flex;
   align-items: center;
   gap: 12px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: 20px;
 }
 
 .header__username {

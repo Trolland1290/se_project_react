@@ -1,13 +1,6 @@
 import "./ModalWithForm.css";
 
-function ModalWithForm({
-  isOpened,
-  closeAllModals,
-  children,
-  title,
-  name,
-  onSubmit,
-}) {
+function ModalWithForm({ isOpened, onClose, children, title, name, onSubmit }) {
   return (
     <div className={isOpened ? "modal modal_opened" : "modal"}>
       <div className="modal__content">
@@ -21,9 +14,7 @@ function ModalWithForm({
         >
           <h2 className="modal__title">{title}</h2>
           <button
-            onClick={(onClose) => {
-              closeAllModals();
-            }}
+            onClick={onClose}
             type="button"
             className="modal__close"
           ></button>

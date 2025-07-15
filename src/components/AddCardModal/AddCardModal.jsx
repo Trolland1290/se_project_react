@@ -1,33 +1,34 @@
 import { useState } from "react";
-import { defaultClothingItems } from "../../utils/constants";
+// import { defaultClothingItems } from "../../utils/constants";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function AddCardModal({ closeAllModals, isOpened }) {
+function AddCardModal({ onClose, isOpened, handleAddCard, clothingItems }) {
   const [name, setName] = useState("");
-  const [link, setLink] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   const [weather, setWeather] = useState("");
 
-  const clothingItemLength = defaultClothingItems.length;
+  const clothingItemLength = clothingItems.length;
 
   const formData = {
     _id: clothingItemLength,
     name: name,
-    link: link,
+    imageUrl: imageUrl,
     weather: weather,
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    defaultClothingItems.push(formData);
+    // defaultClothingItems.push(formData);
+    handleAddCard(formData);
     e.target.reset();
-    closeAllModals();
+    onClose();
   };
   return (
     <ModalWithForm
       title="Add Garment"
       name="create-new-card"
       onSubmit={handleSubmit}
-      closeAllModals={closeAllModals}
+      onClose={onClose}
       isOpened={isOpened}
     >
       {" "}
@@ -51,7 +52,7 @@ function AddCardModal({ closeAllModals, isOpened }) {
           className="modal__input"
           id="imageURL"
           placeholder="Image URL"
-          onChange={(e) => setLink(e.target.value)}
+          onChange={(e) => setImageUrl(e.target.value)}
           required
         />
       </label>

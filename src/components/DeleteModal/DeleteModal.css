@@ -1,0 +1,37 @@
+.delete__close_image {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(src/assets/preview-close.png);
+  position: absolute;
+  top: 20px;
+  right: 28px;
+}
+.modal__content-delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 280px;
+  max-width: 670px;
+}
+
+.delete__confirm {
+  border: none;
+  font-family: "Cabinet Grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  width: 134px;
+  color: #ff4d00;
+}
+
+.delete__cancel {
+  border: none;
+  font-family: "Cabinet Grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  width: 134px;
+  height: 24px;
+}

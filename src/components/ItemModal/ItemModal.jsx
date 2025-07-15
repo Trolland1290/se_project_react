@@ -1,8 +1,8 @@
 import "./ItemModal.css";
 
-function ItemModal({ activeModal, onClose, card }) {
+function ItemModal({ isOpen, onClose, card, openDeleteModal }) {
   return (
-    <div className={`modal  ${activeModal === "preview" && "modal_opened"}`}>
+    <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
       <div className="modal__content modal__content_type_image">
         <button
           onClick={onClose}
@@ -10,12 +10,23 @@ function ItemModal({ activeModal, onClose, card }) {
           className=" modal__close_image "
         ></button>
         <img
-          src={card.link}
+          src={card.imageUrl}
           alt="clothes image"
           className="modal__image modal__image-preview"
         />
         <div className="modal__footer">
-          <h2 className="modal__caption">{card.name}</h2>
+          {" "}
+          <div className="modal__wrapper">
+            <h2 className="modal__caption">{card.name}</h2>
+            <button
+              className="modal__caption-delete"
+              onClick={openDeleteModal}
+              type="button"
+            >
+              {" "}
+              Delete Item
+            </button>
+          </div>
           <p className="modal__weather">Weather: {card.weather} </p>
         </div>
       </div>

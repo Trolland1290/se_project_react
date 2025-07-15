@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Cabinet Grotesk";
-  src: url(/src/assets/fonts/CabinetGrotesk-Variable.ttf);
+  src: url("../../assets/fonts/CabinetGrotesk-Variable.ttf");
 }
 
 .page {
@@ -11,4 +11,8 @@
   max-width: 1360px;
   margin: 0 auto;
   padding: 20px;
+}
+
+* {
+  font-family: "Cabinet Grotesk";
 }

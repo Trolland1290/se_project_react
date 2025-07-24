@@ -9,9 +9,13 @@
   list-style-type: none;
   gap: 21px;
   max-width: 1015px;
-  height: 676px;
 }
 
 .clothes-section__info {
   display: flex;
+  gap: 20px;
+}
+
+.clothes-section__add {
+  border: none;
 }

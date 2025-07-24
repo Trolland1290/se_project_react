@@ -8,11 +8,12 @@ function ClothesSection({ handleCardClick, itemData, openCreateModal }) {
       <div className="clothes-section__info">
         <p>Your Items</p>
         <button
+          className="clothes-section__add"
           onClick={() => {
             openCreateModal();
           }}
         >
-          +Add New
+          + Add New
         </button>
       </div>
 

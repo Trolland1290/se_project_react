@@ -2,7 +2,7 @@ import { useState } from "react";
 // import { defaultClothingItems } from "../../utils/constants";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function AddCardModal({ onClose, isOpened, handleAddCard, clothingItems }) {
+function AddItemModal({ onClose, isOpened, handleAddCard, clothingItems }) {
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [weather, setWeather] = useState("");
@@ -96,4 +96,4 @@ function AddCardModal({ onClose, isOpened, handleAddCard, clothingItems }) {
   );
 }
 
-export default AddCardModal;
+export default AddItemModal;

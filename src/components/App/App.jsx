@@ -5,7 +5,7 @@ import { coordinates, APIkey } from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
-import AddCardModal from "../AddCardModal/AddCardModal";
+import AddItemModal from "../AddItemModal/AddItemModal";
 import ItemModal from "../ItemModal/ItemModal";
 import Profile from "../Profile/Profile";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
@@ -114,7 +114,7 @@ function App() {
           <Footer />
         </div>
 
-        <AddCardModal
+        <AddItemModal
           onClose={closeAllModals}
           isOpened={activeModal === "create"}
           handleAddCard={handleAddCard}

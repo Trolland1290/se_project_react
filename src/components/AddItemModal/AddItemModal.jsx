@@ -1,13 +1,18 @@
 import { useState } from "react";
+import { useForm } from "../../hooks/useForm";
 // import { defaultClothingItems } from "../../utils/constants";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 function AddItemModal({ onClose, isOpened, handleAddCard, clothingItems }) {
-  const [name, setName] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  const [weather, setWeather] = useState("");
+  // const [name, setName] = useState("");
+  // const [imageUrl, setImageUrl] = useState("");
+  // const [weather, setWeather] = useState("");
 
   const clothingItemLength = clothingItems.length;
+
+  const defaultValues = { name: "", imageUrl: "", weather: "" };
+
+  const { values, handleChange, setValues } = useForm({ defaultValues });
 
   const formData = {
     _id: clothingItemLength,
@@ -20,7 +25,6 @@ function AddItemModal({ onClose, isOpened, handleAddCard, clothingItems }) {
     e.preventDefault();
     // defaultClothingItems.push(formData);
     handleAddCard(formData);
-    e.target.reset();
     onClose();
   };
   return (
